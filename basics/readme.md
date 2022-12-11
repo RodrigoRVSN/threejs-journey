@@ -18,3 +18,7 @@ scene.add(mesh)
 - Quarternion
 
 > Those properties will be compiled in matrices.
+
+# Geometries
+
+### Made by vertices. Can be mesh's and particles.
