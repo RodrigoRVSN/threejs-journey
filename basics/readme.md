@@ -22,3 +22,11 @@ scene.add(mesh)
 # Geometries
 
 ### Made by vertices. Can be mesh's and particles.
+
+# Textures
+
+### Where to find: 
+
+- https://www.poliigon.com
+- https://www.3dtextures.me
+- https://www.arroway-textures.ch

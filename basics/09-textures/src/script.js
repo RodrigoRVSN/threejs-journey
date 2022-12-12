@@ -2,15 +2,32 @@ import './style.css'
 import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 
-const image = new Image()
+/* const image = new Image()
 const texture = new THREE.Texture(image)
 
 image.onload = ()  => {
     texture.needsUpdate = true
 }
+image.src = '/textures/door/color.jpg' */
 
-image.src = '/textures/door/color.jpg'
+const loadingManager = new THREE.LoadingManager()
 
+const textureLoader = new THREE.TextureLoader(loadingManager)
+const colorTexture = textureLoader.load('/textures/minecraft.png')
+
+/* colorTexture.repeat.x = 5
+colorTexture.repeat.y = 5
+colorTexture.wrapS = THREE.MirroredRepeatWrapping
+colorTexture.wrapT = THREE.MirroredRepeatWrapping
+
+colorTexture.offset.y = 0.5
+colorTexture.offset.x = 0.5
+
+colorTexture.rotation = Math.PI / 4 */
+
+colorTexture.generateMipmaps = false
+colorTexture.minFilter = THREE.NearestFilter
+colorTexture.magFilter = THREE.NearestFilter
 /**
  * Base
  */
@@ -24,7 +41,7 @@ const scene = new THREE.Scene()
  * Object
  */
 const geometry = new THREE.BoxGeometry(1, 1, 1)
-const material = new THREE.MeshBasicMaterial({ map: texture })
+const material = new THREE.MeshBasicMaterial({ map: colorTexture })
 const mesh = new THREE.Mesh(geometry, material)
 scene.add(mesh)
 
@@ -58,7 +75,7 @@ window.addEventListener('resize', () =>
 const camera = new THREE.PerspectiveCamera(75, sizes.width / sizes.height, 0.1, 100)
 camera.position.x = 1
 camera.position.y = 1
-camera.position.z = 1
+camera.position.z = 3
 scene.add(camera)
 
 // Controls
