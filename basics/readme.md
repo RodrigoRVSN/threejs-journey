@@ -30,3 +30,10 @@ scene.add(mesh)
 - https://www.poliigon.com
 - https://www.3dtextures.me
 - https://www.arroway-textures.ch
+
+# Materials
+
+### Use a CubMap Hdri to make a envMap material reflection effect.
+
+- https://polyhaven.com
+- https://matheowis.github.io/HDRI-to-CubeMap/ -> Convert HDRI images to a Cube Map
