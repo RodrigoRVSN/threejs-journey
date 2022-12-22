@@ -231,7 +231,6 @@ const displacementPass = new ShaderPass(DisplacementPass)
 displacementPass.material.uniforms.uNormalMap.value = textureLoader.load('/textures/interfaceNormalMap.png')
 effectComposer.addPass(displacementPass)
 
-
 /**
  * Animate
  */
