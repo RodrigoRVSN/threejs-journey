@@ -43,7 +43,7 @@ export default function Experience()
                         font='./bangers-v20-latin-regular.woff'
                         fontSize={1}
                         position={[2, 1.75, 0.75]}
-                        rotation-y={-1.25}
+                        rotation-y={-1.25 }
                         maxWidth={2}
                         textAlign='center'
                     >
